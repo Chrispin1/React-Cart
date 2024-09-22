@@ -1,5 +1,7 @@
-const ProductContext = () => {
-  return <div>ProductContext</div>;
-};
+import { createContext } from "react";
 
-export default ProductContext;
+export const ProductContext = createContext([]);
+
+export const ProductContextProvider = ({ children }) => {
+  return <ProductContext.Provider>{children}</ProductContext.Provider>;
+};
